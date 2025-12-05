@@ -1,0 +1,18 @@
+## Acknowledgements
+This project would not have been successful without the tireless efforts of the following individuals:
+
+**Prof. Spencer** - Thank you for providing us with the tools, guidance, and support that propelled us through the semester and made this project possible. This class was truly impactful and we feel grateful for the mentorship and rigorous learning opportunities he stewarded. 
+
+**Xavier Walter** - Thank you for being an incredible support system and mentor to all the engineers. During this course you have worked overtime to help us debug, work through the challenging problems, and provided a calming presence in times of stress. Thank you for printing the barcode poster and consulting on the design of this system. 
+
+**MicroPs Tutors** - Neil Chulani, Kavi Dey, Troy Kauffman, and Vikram Krishna: thank you for using your previous experiences in MicroPs to guide us through our work and providing a voice of reason. We are very grateful that you took time out of your busy schedules to extend office hours and provide further assistance during the project phase.
+
+**Our classmates** - Thank you for supporting us throughout the entire semester, keeping us company during late night work sessions, and making MicroPs a truly memorable experience.
+
+
+## Resources
+[STM32L432KC Reference Manual](https://hmc-e155.github.io/assets/doc/rm0394-stm32l41xxx42xxx43xxx44xxx45xxx46xxx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf) 
+
+[STM32L432KC Datasheet](https://hmc-e155.github.io/assets/doc/ds11451-stm32l432kc.pdf)
+
+[iCE40UP5K Datasheet](https://hmc-e155.github.io/assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf)

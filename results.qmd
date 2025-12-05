@@ -1,0 +1,44 @@
+## Results
+
+### Project Specifications and Justifications
+The list of all project specifications developed during the proposal phase were met and are listed below:    
+    1. FPGA correctly interprets the barcode scanner signal, including proper synchronization and sampling.  
+    2. FPGA and MCU communicate reliably over SPI.  
+    3. The system generates audio within the 200–2000 Hz range by FM-modulating a tone on the microcontroller.  
+    4. Audio playback activates only when the barcode scanner’s trigger is pressed.  
+    5. The pitch of the sound changes according to the barcode being scanned.  
+    6. The MCU employs a new peripheral (the DAC) to drive the audio output.  
+    7. There is no audible latency between scanning and the start of the note.  
+    8. The FIR filtering function is applied to each note to smooth the waveform.  
+    9. Thomas and Leilani wear stripes. 🦓  
+    10. The system reliably detects barcode scans under normal use.  
+    11. The system recovers gracefully after an interrupted scan without requiring a reset.  
+    12. No audible clipping, harsh artifacts, or digital noise are present in the output.  
+
+### Video Demonstration
+Listen to the barcode instrument in action in the video below!
+
+{{< video https://www.youtube.com/watch?v=3ur4wau4Agg >}}
+
+### Modulated Waveforms from DAC
+Oscilloscope traces demonstrate reliable frequency modulation on all tested barcodes, with frequencies falling within the desired range. The periods of each oscillation are visibly variable, with cursors and built-in frequency measurements confirming proper behavior. The top image shows a recent frequency measurement of 510 Hz and the second image shows a 1 kHz frequency being recorded. The modulation varies based on the distance the scanner is from the sequence and the scanner’s movement over the pattern. Even if calculated frequencies fall beyond this range, they are capped at 200 Hz or 2 kHz.
+
+![Figure 1: Modulated DAC Waveform at 510 Hz](Final%20Report%20Photos/510Hz.png)
+
+![Figure 2: Modulated DAC Waveforms at 1000 Hz](Final%20Report%20Photos/1000Hz.png)
+
+### FPGA to MCU Communication with SPI
+The decimated FIR filter implemented on the FPGA generates a 32-bit tuning word transmitted via 4 8-bit SPI transactions. Communication between the FPGA and the MCU is unidirectional, with MCU operating as the driver, receiving packets of the tuning word over MISO, and the FPGA designated as the receiver, receiving zeros in return. Based on the 8-tap filter implementation, tuning words should range between 0 and 506. The image and print sequence below demonstrate reasonable tuning word values reconstructed in the MCU code to drive DDS.
+
+![Figure 3: MCU DDS Print Statements](Final%20Report%20Photos/Print%20Statements.png)
+
+![Figure 4: One-Way SPI Transaction on Logic Analyzer](Final%20Report%20Photos/LogicAnalyzerSPI.png)
+
+### Decimated FIR Filter Top Module Waveforms
+
+
+### Decimated FIR Filter Core Waveforms
+
+
+
+

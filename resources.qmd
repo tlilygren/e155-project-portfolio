@@ -1,0 +1,5 @@
+## Project Resources
+
+STM32L432KC reference manual and datasheet
+iCE40UP5K datasheet
+Barcode scanner datasheet

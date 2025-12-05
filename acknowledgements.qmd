@@ -1,0 +1,10 @@
+## Acknowledgements
+This project would not have been successful without the tireless efforts of the following individuals:
+
+Prof. Spencer - Thank you for providing us with the tools, guidance, and support that made
+
+Xavier Walter - Thank you for 
+
+MicroPs Tutors - Neil Chulani, Kavi Dey, Troy Kauffman, and Vikram Krishna
+
+Our classmates - Thank you for supporting us throughout the entire semester, keeping us company during late night work sessions, and making MicroPs a truly memorable experience.

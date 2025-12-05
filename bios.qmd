@@ -1,0 +1,50 @@
+## Meet the Team
+
+### Leilani Elkaslasy
+<img src="Final%20Report%20Photos/Leilaniheadshot.jpg" style="display:block; margin:0 auto; width:180px; height:180px; border-radius:50%; object-fit:cover;" />
+
+Bio
+
+<div style="text-align:center; margin-top:1rem;">
+
+  <a href="https://www.linkedin.com/in/leilani-elkaslasy-7863a3330/"
+     style="display:inline-flex; align-items:center; padding:6px 14px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:#333; margin-right:10px;">
+    <i class="bi bi-linkedin" style="font-size:1.1rem; margin-right:6px;"></i>
+    LinkedIn
+  </a>
+  <a href="https://github.com/lanilei"
+     style="display:inline-flex; align-items:center; padding:6px 14px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:#333;">
+    <i class="bi bi-github" style="font-size:1.1rem; margin-right:6px;"></i>
+    Github
+  </a>
+  <a href="https://lanilei.github.io/E155portfolio/"
+     style="display:inline-flex; align-items:center; padding:6px 14px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:#333;">
+    Website
+  </a>
+
+</div>
+
+### Thomas Lilygren
+
+<img src="images/thomas.jpg" style="display:block; margin:0 auto; width:180px; height:180px; border-radius:50%; object-fit:cover;" />
+
+Growth and favorite moment from microPs.
+
+<div style="text-align:center; margin-top:1rem;">
+
+  <a href="https://linkedin.com/in/thomas-lilygren"
+     style="display:inline-flex; align-items:center; padding:6px 14px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:#333; margin-right:10px;">
+    <i class="bi bi-linkedin" style="font-size:1.1rem; margin-right:6px;"></i>
+    LinkedIn
+  </a>
+  <a href="https://github.com/tlilygren"
+     style="display:inline-flex; align-items:center; padding:6px 14px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:#333;">
+    <i class="bi bi-github" style="font-size:1.1rem; margin-right:6px;"></i>
+    Github
+  </a>
+  <a href="https://tlilygren.github.io/e155-quarto-portfolio/"
+     style="display:inline-flex; align-items:center; padding:6px 14px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:#333;">
+    Website
+  </a>
+
+</div>

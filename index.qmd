@@ -1,0 +1,11 @@
+---
+title: "E155 Final Project: Barcode Beats"
+---
+
+![Project creators, Leilani and Thomas, posing with their newly-modified barcode scanner instruments. Learn more about the team members [here](bios.qmd)](images/IMG_8681.jpg)
+
+## Abstract
+This project consists of implementing a digital signal processing pipeline on an FPGA and MCU that manipulates a square-wave input from a barcode scanner to output an audible frequency-modulated sine wave in response to scanning a barcode pattern. The generated square wave signal from reading bar patterns was isolated on the scanner through careful deconstruction, PCB probing, and reviewing avaiable scanner documentation. This signal was wired out of the scanner and input into the FPGA, synchronized, and sampled at 48 kHz. The FPGA then applied a finite-impulse-response (FIR) low-pass filter to smooth the corners of the square wave followed by 4x decimation to provide downsample the signal, ensure stable SPI transactions, and allow for smooth frequency modulation. The decimated signal produces a 32-bit tuning word that was sent to the MCU through 4 8-bit SPI to drive a direct digital synthesis (DDS) process. The MCU indexes through the sine look up table (LUT) at a rate dependent on the tuning word, interpolates those values, and outputs them on the digital to analog converter (DAC) peripheral. 
+
+## Project Motivation
+This project took a barcode scanner and repurposed it to create music! When it comes to checking out at stores or inventory keeping, barcode scanners are omnipresent, but a close look at how they work unleashed a deep exploration into digital signal processing and sound generation. This project was born out of a desire to create excitement out of the mundane tools that surround us, stripes and scanners, and capture the beauty of our surroundings by turning them into music. Along the way a deepened understanding of digital signal processing and the challenges of sound generation was found! 

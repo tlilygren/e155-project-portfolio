@@ -1,0 +1,34 @@
+## Project Documentation
+
+### Source Code
+All MCU, FPGA, and MATLAB code related to this project can be found at the GitHub repository [here.](https://github.com/lanilei/E155-Project-Barcode-Beats)
+
+### New Hardware Implementation
+The NetumScan USB 1D Barcode Scanner was selected as the barcode scanner of choice for this project due to its simple design and low cost. Using the barcode scanner beyond its intended purpose was a wild card design factor since there are no available PCB designs or product datasheets that could assist us in our redesign. Extensive research showed that barcode scanners should have a square wave signal that is the initial “raw” interpretation of the barcode. With this in mind, the barcode scanner was disassembled and the PCB was probed extensively on the oscilloscope while scanning barcodes to find this desired signal. The pin referenced in the figure below was identified t be the source of the desired raw scanner signal that would be leveraged throughout the rest of the project.
+
+![Figure 1: Internal Scanner Hardware close up with probe pointing to square wave source](Final%20Report%20Photos/squarewavesource.jpeg)
+
+Since this pin was in close proximity to surrounding pins, the signal trace was further investigated until it was found to reach an empty surface mount resistor slot upon which a wire feeding to the FPGA was soldered. 
+
+Next, the trigger switch was isolated in a similar fashion. The pin was found to idle high at 3.3 V, and when activated, dropped to 0 V. A wire was also soldered to this pin to ultimately feed to the MCU before reassmbling the device.
+
+### Electric Schematic
+The schematic below showcases how the entire system interfaces with each other, the wired connections, and the analog components added for the audio amplifier.
+
+![Figure 2: Electric Schematic for the Entire System](Final%20Report%20Photos/Schematic.png)
+
+### FPGA Block Diagram
+The block diagram below outlines the structure of the FPGA system design, including inputs, intermediate signals and modules, and outputs. The FPGA design consists of a synchronizer, a filter module, an internal clock and counter, and a SPI communicaiton module.
+
+![Figure 3: FPGA Top Module Block Diagram](Final%20Report%20Photos/FPGABlockDiagram.png)
+
+### Bill of Materials
+The project was given a budget of $50, and the Bill of Materials below show how that budget was allocated.
+
+| Item                         | Link / Source        | Quantity |  Total Cost |
+|------------------------------|----------------------|----------|-------------|
+| Barcode Scanner              | [Amazon](https://a.co/d/jctilRW) | 2 | $27.92 |
+| iCE40 UltraPlus 5K FPGA      | E155 Lab Kit         | 1     | $0 |
+| STM32L432KC                  | E155 Lab Kit         | 1     | $0 |
+| LM386 Audio Amplifier        | E155 Lab Kit         | 1     | $0 |
+| 8 Ω Speaker                  | E155 Lab Kit         | 1     | $0 |
