@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>This project consists of implementing a digital signal processing pipeline on an FPGA and MCU that manipulates a square-wave input from a barcode scanner to output an audible frequency-modulated sine wave in response to scanning a barcode pattern. The generated square wave signal from reading bar patterns was isolated on the scanner through careful deconstruction, PCB probing, and reviewing avaiable scanner documentation. This signal was wired out of the scanner and input into the FPGA, synchronized, and sampled at 48 kHz. The FPGA then applied a finite-impulse-response (FIR) low-pass filter to smooth the corners of the square wave followed by 4x decimation to provide downsample the signal, ensure stable SPI transactions, and allow for smooth frequency modulation. The decimated signal produces a 32-bit tuning word that was sent to the MCU through 4 8-bit SPI to drive a direct digital synthesis (DDS) process. The MCU indexes through the sine look up table (LUT) at a rate dependent on the tuning word, interpolates those values, and outputs them on the digital to analog converter (DAC) peripheral.</p>
+<p>This project consists of implementing a digital signal processing pipeline on an FPGA and MCU that manipulates a square-wave input from a barcode scanner to output an audible frequency-modulated sine wave in response to scanning a barcode pattern. The generated square wave signal from reading bar patterns was isolated on the scanner through careful deconstruction and PCB probing. This signal was wired out of the scanner and input into the FPGA, synchronized, and sampled at 48 kHz. The FPGA then applied a finite-impulse-response (FIR) low-pass filter to smooth the corners of the square wave followed by 4x decimation to provide downsample the signal, ensure stable SPI transactions, and allow for smooth frequency modulation. The decimated signal produces a 32-bit tuning word that was sent to the MCU through 4 8-bit SPI to drive a direct digital synthesis (DDS) process. The MCU indexes through the sine look up table (LUT) at a rate dependent on the tuning word, interpolates those values, and outputs them on the digital to analog converter (DAC) peripheral.</p>
 </section>
 <section id="project-motivation" class="level2">
 <h2 class="anchored" data-anchor-id="project-motivation">Project Motivation</h2>
@@ -254,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/tlilygren\.github\.io\/e155-project-portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

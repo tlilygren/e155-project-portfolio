@@ -143,8 +143,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#video-demonstration" id="toc-video-demonstration" class="nav-link" data-scroll-target="#video-demonstration">Video Demonstration</a></li>
   <li><a href="#modulated-waveforms-from-dac" id="toc-modulated-waveforms-from-dac" class="nav-link" data-scroll-target="#modulated-waveforms-from-dac">Modulated Waveforms from DAC</a></li>
   <li><a href="#fpga-to-mcu-communication-with-spi" id="toc-fpga-to-mcu-communication-with-spi" class="nav-link" data-scroll-target="#fpga-to-mcu-communication-with-spi">FPGA to MCU Communication with SPI</a></li>
-  <li><a href="#decimated-fir-filter-top-module-waveforms" id="toc-decimated-fir-filter-top-module-waveforms" class="nav-link" data-scroll-target="#decimated-fir-filter-top-module-waveforms">Decimated FIR Filter Top Module Waveforms</a></li>
-  <li><a href="#decimated-fir-filter-core-waveforms" id="toc-decimated-fir-filter-core-waveforms" class="nav-link" data-scroll-target="#decimated-fir-filter-core-waveforms">Decimated FIR Filter Core Waveforms</a></li>
+  <li><a href="#top-module-waveforms" id="toc-top-module-waveforms" class="nav-link" data-scroll-target="#top-module-waveforms">Top Module Waveforms</a></li>
+  <li><a href="#decimated-fir-core-waveforms" id="toc-decimated-fir-core-waveforms" class="nav-link" data-scroll-target="#decimated-fir-core-waveforms">Decimated FIR Core Waveforms</a></li>
+  <li><a href="#physical-system-implementation" id="toc-physical-system-implementation" class="nav-link" data-scroll-target="#physical-system-implementation">Physical System Implementation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -210,11 +211,41 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="decimated-fir-filter-top-module-waveforms" class="level3">
-<h3 class="anchored" data-anchor-id="decimated-fir-filter-top-module-waveforms">Decimated FIR Filter Top Module Waveforms</h3>
+<section id="top-module-waveforms" class="level3">
+<h3 class="anchored" data-anchor-id="top-module-waveforms">Top Module Waveforms</h3>
+<p>The top module waveforms test the full FPGA system function, including the filter core, which consists of signal synchronization and filtering mechanics, and the the SPI communication file (Figure 5). Figure 6 provides more granular resolution to the intricate processes executing in the FPGA implementation</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Final Report Photos/zoom out.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5: Top Module Waveforms Full</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Final Report Photos/zoom in.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6: Top Module Waveforms Zoomed In</figcaption>
+</figure>
+</div>
 </section>
-<section id="decimated-fir-filter-core-waveforms" class="level3">
-<h3 class="anchored" data-anchor-id="decimated-fir-filter-core-waveforms">Decimated FIR Filter Core Waveforms</h3>
+<section id="decimated-fir-core-waveforms" class="level3">
+<h3 class="anchored" data-anchor-id="decimated-fir-core-waveforms">Decimated FIR Core Waveforms</h3>
+<p>The filter and decimation mechanics were tested with random input binary inputs representing a sampled square wave. Figure 7 showcases proper filtering performance for an input of a “sampled” input of 11011000. The achieved tuning word output of 253 matches the expected output calculated by hand.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Final Report Photos/253testbench.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7: Decimated FIR Core Waveforms</figcaption>
+</figure>
+</div>
+</section>
+<section id="physical-system-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="physical-system-implementation">Physical System Implementation</h3>
+<p>Figure 8 showcases the full breadboarded installation of the system, demonstrating the physical connections between the scanner inputs, the FPGA, the MCU, and the audio amplifier with a gain of 20.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Final Report Photos/breadboard_image.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Figure 8: Physical System Implementation</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -293,7 +324,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/tlilygren\.github\.io\/e155-project-portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

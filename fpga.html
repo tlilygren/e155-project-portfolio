@@ -192,7 +192,7 @@ y[n] = \sum_{k=0}^{M-1} h[k]\,x[n-k]
 <p>The FPGA implements convolution via a shift register with eight flip-flops. Only eight registers can be accomodated since this is the maximum number of multipliers within the FPGA’s DSP block. A 24 MHz clock frequency is initiated with the device’s internal high-speed oscillator (HSOSC) and a counter is used to divide this frequency to a 48 kHz sampling frequency. Upon each rising edge of the of the sampling signal, a new sample of the input wave is taken an propagates through the shift register. At each stage in the shifting process, signals output from each flip-flop are multiplied by designated signed tap coefficients and summed to produce a tuning word. The factor of 4 decimation reduces the sampling rate to 12 kHz, so the tuning word is only updated every four samples. The downsampling provides added fidelity for future SPI communication, controls the speed for which the frequency modulation on the MCU occurs, and enhances overall signal quality.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Final Report Photos/FIRanddecimationdrawing.jpeg" class="img-fluid figure-img"></p>
+<p><img src="Final Report Photos/FIRanddecimationdrawing1.jpeg" class="img-fluid figure-img"></p>
 <figcaption>Figure 1: Low-pass FIR Design</figcaption>
 </figure>
 </div>
@@ -252,7 +252,7 @@ y[n] = \sum_{k=0}^{M-1} h[k]\,x[n-k]
 <p>To determine the optimal 8-tap FIR low-pass filter coefficients for smoothing, the raw signal from a uniform barcode pattern was measured on the oscilloscope (Figure 3). The signal demonstrated an approximate 1.2 kHz square wave frequency around which the MATLAB script was optimized. While the signal frequency depends on the speed and height of the scanner as well as the pattern it reads, this value was deemed as a sufficient baseline for modeling purposes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Final Report Photos/Midpoint.photos/processpic_firstscanseenonscope.png" class="img-fluid figure-img"></p>
+<p><img src="Final Report Photos/oscillliscoop.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 2: Oscilloscope trace of unfiltered barcode output</figcaption>
 </figure>
 </div>
@@ -352,7 +352,7 @@ y[n] = \sum_{k=0}^{M-1} h[k]\,x[n-k]
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/tlilygren\.github\.io\/e155-project-portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
