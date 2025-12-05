@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="fpga-to-mcu-communication-with-spi" class="level3">
 <h3 class="anchored" data-anchor-id="fpga-to-mcu-communication-with-spi">FPGA to MCU Communication with SPI</h3>
-<p>The decimated FIR filter implemented on the FPGA generates a 32-bit tuning word transmitted via 4 8-bit SPI transactions. Communication between the FPGA and the MCU is unidirectional, with MCU operating as the driver, receiving packets of the tuning word over MISO, and the FPGA designated as the receiver, receiving zeros in return. Based on the 8-tap filter implementation, tuning words should range between 0 and 506. The image and print sequence below demonstrate reasonable tuning word values reconstructed in the MCU code to drive DDS.</p>
+<p>The decimated FIR filter outputs a 32-bit tuning word calculated on the FPGA is sent to the MCU via 4 8-bit SPI transactions at a 2 MHz baud rate. Communication between the two decives is unidirection, with the MCU operating as the driver, receiving tuning word packets over the MISO line, and the FPGA behaving as the pheripheral, receiving unused zeros in return. Given the selected 8-tap filter weights, tuning word values should range between 0 and 506. Figure 3 illustrates the reconstructed tuning word received by the MCU, and Figure 4 showcases the correct data packet communication on the logic analyzer.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Final Report Photos/Print Statements.png" class="img-fluid figure-img"></p>
